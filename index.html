@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    @media (min-width: 768px) {
+      .weather-input, .weather-data {
+        padding: 2rem;
+      }
+    }
+  </style>
+</head>
+<body class="bg-gray-200">
+  <div class="container mx-auto p-6 md:p-8">
+    <h1 class="text-3xl md:text-4xl text-center font-bold mb-8 text-white bg-blue-600 py-4 rounded-lg">Weather Dashboard</h1>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div class="weather-input bg-white p-6 rounded-lg shadow-md relative">
+        <h3 class="text-lg font-semibold mb-4">Enter a City Name</h3>
+        <input class="city-input border border-gray-300 rounded px-3 py-2 w-full mb-4 focus:outline-none focus:border-blue-400" type="text" placeholder="E.g., New York, London, Tokyo">
+        <div class="dropdown hidden absolute z-10 bg-white shadow-md rounded mt-2 w-full">
+          <ul class="recent-cities"></ul>
+        </div>
+        <div class="flex flex-col gap-4">
+          <button class="search-btn bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 focus:outline-none">Search</button>
+          <div class="separator text-center my-6 text-gray-400 font-semibold">or</div>
+          <button class="location-btn bg-gray-600 text-white py-2 px-4 rounded hover:bg-gray-700 focus:outline-none">Use Current Location</button>
+        </div>
+      </div>
+      <div class="weather-data bg-blue-600 text-white p-6 rounded-lg shadow-md">
+     <div class="current-weather mb-8">
+          <div class="details">
+            <h2 class="text-2xl md:text-3xl font-bold mb-4">_______ ( ______ )</h2>
+            <h6>Temperature: __°C</h6>
+            <h6>Wind: __ M/S</h6>
+            <h6>Humidity: __%</h6>
+          </div>
+        </div>
+        <div class="days-forecast">
+          <h2 class="text-xl md:text-2xl mb-4 font-semibold">5-Day Forecast</h2>
+          <ul class="weather-cards grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
+           <li class="card bg-gray-600 text-white p-4 rounded-lg shadow-md">
+              <h3 class="text-lg font-semibold">_______ ( ______ )</h3>
+              <h6 class="text-sm">Temp: __°C</h6>
+              <h6 class="text-sm">Wind: __ M/S</h6>
+              <h6 class="text-sm">Humidity: __%</h6>
+            </li>
+                    <li class="card bg-gray-600 text-white p-4 rounded-lg shadow-md">
+              <h3 class="text-lg font-semibold">_______ ( ______ )</h3>
+              <h6 class="text-sm">Temp: __°C</h6>
+              <h6 class="text-sm">Wind: __ M/S</h6>
+              <h6 class="text-sm">Humidity: __%</h6>
+            </li>
+                    <li class="card bg-gray-600 text-white p-4 rounded-lg shadow-md">
+              <h3 class="text-lg font-semibold">_______ ( ______ )</h3>
+              <h6 class="text-sm">Temp: __°C</h6>
+              <h6 class="text-sm">Wind: __ M/S</h6>
+              <h6 class="text-sm">Humidity: __%</h6>
+            </li>
+                    <li class="card bg-gray-600 text-white p-4 rounded-lg shadow-md">
+              <h3 class="text-lg font-semibold">_______ ( ______ )</h3>
+              <h6 class="text-sm">Temp: __°C</h6>
+              <h6 class="text-sm">Wind: __ M/S</h6>
+              <h6 class="text-sm">Humidity: __%</h6>
+            </li>
+                    <li class="card bg-gray-600 text-white p-4 rounded-lg shadow-md">
+              <h3 class="text-lg font-semibold">_______ ( ______ )</h3>
+              <h6 class="text-sm">Temp: __°C</h6>
+              <h6 class="text-sm">Wind: __ M/S</h6>
+              <h6 class="text-sm">Humidity: __%</h6>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="index.js" defer></script>
+</body>
+</html>
